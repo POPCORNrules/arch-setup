@@ -42,5 +42,5 @@ rm -rf .src/yay
 runuser -u $USERNAME -- yay -Sy yadm lightdm-webkit-theme-aether-git bashmount
 sed -i 's/^webkit_theme\s*=\s*\(.*\)/webkit_theme = lightdm-webkit-theme-aether/g' /etc/lightdm/lightdm-webkit2-greeter.conf
 sed -i 's/^\(#\?greeter\)-session\s*=\s*\(.*\)/greeter-session = lightdm-webkit2-greeter/g' /etc/lightdm/lightdm.conf
-curl -SsL https://popcornrules.com/scripts/arch-setup/stage-3.sh -o /home/$USERNAME/stage-3.sh
+curl -SsL https://raw.githubusercontent.com/POPCORNrules/arch-setup/master/stage-3.sh -o /home/$USERNAME/stage-3.sh
 chown $USERNAME:$USERNAME /home/$USERNAME/stage-3.sh
