@@ -29,7 +29,7 @@ awk '$2~"^/$"{print option "options root="$1" rw"}' /etc/fstab >> /boot/loader/e
 systemctl enable lightdm
 systemctl enable acpid
 echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/00-wheel
-useradd -m -G wheel $USERNAME
+useradd -m -G wheel,video $USERNAME
 clear
 echo Set user password
 passwd $USERNAME
